@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th (click)="toggleSort('address')">Destination</th>
+      <th (click)="toggleSort('gateway')">Gateway</th>
+      <th (click)="toggleSort('interface')">Interface</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let route of sortedRoutes$ | async">
+      <td>{{ route.address }}</td>
+      <td>{{ route.gateway }}</td>
+      <td>{{ route.interface }}</td>
+    </tr>
+  </tbody>
+</table>
