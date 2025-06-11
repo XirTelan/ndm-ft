@@ -8,7 +8,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let route of sortedRoutes()">
-      <td>{{ route.address }}</td>
+      <td>{{ route.address }}/{{ route.mask }}</td>
       <td>{{ route.gateway }}</td>
       <td>{{ route.interface }}</td>
     </tr>
