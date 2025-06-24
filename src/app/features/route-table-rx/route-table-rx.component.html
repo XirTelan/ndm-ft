@@ -1,0 +1,28 @@
+@let sortBy = sortBy$ | async; @let sortAsc = sortAsc$ | async;
+
+<table>
+  <thead>
+    <tr>
+      @for (column of SORTABLE_COLUMNS; track column) {
+      <th
+        [class]="{
+          'active-asc': sortBy === column && sortAsc,
+          'active-desc': sortBy === column && !sortAsc
+        }"
+        (click)="toggleSort(column)"
+      >
+        {{ column | titlecase }}
+      </th>
+      }
+    </tr>
+  </thead>
+  <tbody>
+    @for (route of sortedRoutes$ | async; track route.address) {
+    <tr>
+      <td>{{ route.address }}/{{ route.mask }}</td>
+      <td>{{ route.gateway }}</td>
+      <td>{{ route.interface }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
