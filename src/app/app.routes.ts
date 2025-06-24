@@ -13,6 +13,24 @@ export const routes: Routes = [
     path: 'network-map',
     component: NetworkMap,
     canActivate: [isAuthGuard],
+    data: { label: 'Network Map' },
+  },
+  {
+    path: 'internet',
+    data: { label: 'Internet' },
+    loadComponent: () =>
+      import('./pages/internet/internet.component').then((c) => c.InternetPage),
+  },
+  {
+    path: 'wireless',
+    loadComponent: () =>
+      import('./pages/wireless/wireless').then((c) => c.Wireless),
+  },
+  {
+    path: 'advanced',
+    data: { label: 'Advanced' },
+    loadComponent: () =>
+      import('./pages/advanced/advanced.component').then((c) => c.Advanced),
   },
   {
     path: 'login',
