@@ -1,0 +1,12 @@
+.container {
+  background: var(--clr-primary);
+  padding: 0.25rem;
+  size: 10rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+}

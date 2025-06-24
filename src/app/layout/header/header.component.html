@@ -1,11 +1,11 @@
-<header>
+<header class="container">
   <nav>
     <ul>
+      @for (route of routes; track route.data!['label'] ) {
       <li>
-        <a routerLink="/network-map">network-map</a>
+        <a [routerLink]="route.path">{{ route.data!["label"] }}</a>
       </li>
-      <li></li>
-      <li></li>
+      }
     </ul>
   </nav>
 </header>
