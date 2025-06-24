@@ -3,6 +3,7 @@ import { HomePage } from './pages/home/home.components';
 import { NetworkMap } from './pages/network-map/network-map.component';
 import { isAuthGuard } from './is-auth-guard';
 import { Login } from './pages/login/login';
+import { NotFound } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -35,5 +36,9 @@ export const routes: Routes = [
   {
     path: 'login',
     component: Login,
+  },
+  {
+    path: '**',
+    component: NotFound,
   },
 ];
