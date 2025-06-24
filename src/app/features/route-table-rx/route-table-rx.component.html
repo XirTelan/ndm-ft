@@ -17,7 +17,7 @@
     </tr>
   </thead>
   <tbody>
-    @for (route of sortedRoutes$ | async; track route.address) {
+    @for (route of sortedRoutes$ | async; track route.uuid) {
     <tr>
       <td>{{ route.address }}/{{ route.mask }}</td>
       <td>{{ route.gateway }}</td>

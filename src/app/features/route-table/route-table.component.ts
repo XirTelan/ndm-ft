@@ -1,13 +1,13 @@
 import { Component, signal, computed } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { routes } from '../../../constant';
 import { SORTABLE_COLUMNS, SortBy } from '../../types';
 import { compareRoutes } from '@/src/utils';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'route-table',
-  imports: [CommonModule],
+  imports: [TitleCasePipe],
   templateUrl: './route-table.component.html',
 })
 export class RouteTable {
