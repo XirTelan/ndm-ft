@@ -10,7 +10,6 @@ import { AsyncPipe, TitleCasePipe } from '@angular/common';
   selector: 'route-table-rx',
   imports: [AsyncPipe, TitleCasePipe],
   templateUrl: './route-table-rx.component.html',
-  styleUrls: ['./route-table-rx.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RouteTableRx {

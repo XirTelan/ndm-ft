@@ -9,7 +9,6 @@ import { compareRoutes } from '@/src/utils';
   selector: 'route-table',
   imports: [CommonModule],
   templateUrl: './route-table.component.html',
-  styleUrls: ['./route-table.component.css'],
 })
 export class RouteTable {
   readonly SORTABLE_COLUMNS = SORTABLE_COLUMNS;
