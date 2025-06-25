@@ -1,6 +1,6 @@
 import { Component, signal, computed } from '@angular/core';
-import { routes } from '../../../constant';
-import { SORTABLE_COLUMNS, SortBy } from '../../types';
+import { routes } from '../../../../constant';
+import { SORTABLE_COLUMNS, SortBy } from '../../../types';
 import { compareRoutes } from '@/src/utils';
 import { TitleCasePipe } from '@angular/common';
 

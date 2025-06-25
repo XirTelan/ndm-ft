@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { routes } from '../../../constant';
-import { compareRoutes } from '../../../utils';
-import { SORTABLE_COLUMNS, SortBy } from '../../types';
+import { routes } from '../../../../constant';
+import { compareRoutes } from '../../../../utils';
+import { SORTABLE_COLUMNS, SortBy } from '../../../types';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({
@@ -14,6 +14,7 @@ import { TitleCasePipe } from '@angular/common';
 export class RouteTableOld {
   protected sortBy: SortBy = null;
   protected sortAsc: boolean = true;
+  readonly SORTABLE_COLUMNS = SORTABLE_COLUMNS;
 
   get sortedRoutes() {
     if (!this.sortBy) return [...routes];
@@ -24,8 +25,6 @@ export class RouteTableOld {
         : compareRoutes(b, a, this.sortBy!)
     );
   }
-
-  readonly SORTABLE_COLUMNS = SORTABLE_COLUMNS;
 
   toggleSort(column: NonNullable<SortBy>) {
     if (this.sortBy === column) {
