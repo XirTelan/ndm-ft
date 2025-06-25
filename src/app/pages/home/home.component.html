@@ -1,10 +1,12 @@
 <main class="main">
   <div class="content">
-    <span>Table with signals</span>
-    <route-table />
-    <span>Table with RxJs</span>
-    <route-table-rx />
+    <mat-tab-group>
+      <mat-tab label="First">
+        <span>Table with signals</span> <route-table />
+      </mat-tab>
+      <mat-tab label="Second">
+        <span>Table with RxJs</span> <route-table-rx />
+      </mat-tab>
+    </mat-tab-group>
   </div>
 </main>
-
-
