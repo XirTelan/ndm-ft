@@ -1,7 +1,11 @@
 .container {
-  background: var(--clr-primary);
+  background: var(--mat-sys-primary-container);
+
   padding: 0.25rem;
   size: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 ul {

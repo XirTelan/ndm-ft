@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, Route } from '@angular/router';
+import { ThemeSwitch } from '../../features/theme-switch/theme-switch.component';
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink],
+  imports: [RouterLink, ThemeSwitch],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
