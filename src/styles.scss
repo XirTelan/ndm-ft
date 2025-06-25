@@ -1,0 +1,94 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+html {
+  color-scheme: light dark;
+  @include mat.theme(
+    (
+      color: mat.$violet-palette,
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root {
+  --clr-primary: #48c8d8;
+}
+
+* {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: var(--mat-sys-secondary);
+  color: var(--mat-sys-on-secondary);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+thead {
+  background-color: var(--mat-sys-tertiary);
+  color: var(--mat-sys-on-tertiary);
+}
+
+th,
+td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--mat-sys-outline-variant);
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+th::after {
+  content: "⇅";
+  position: absolute;
+  right: 8px;
+  color: #bbb;
+  font-size: 0.8em;
+}
+
+th.active-asc::after {
+  content: "↑";
+  color: #000;
+}
+
+th.active-desc::after {
+  content: "↓";
+  color: #000;
+}
+
+tr:nth-child(even) {
+  background-color: var(--mat-sys-secondary-container);
+  color: var(--mat-sys-on-secondary-container);
+}
+tr:hover {
+  background-color: var(--mat-sys-tertiary);
+  color: var(--mat-sys-on-tertiary);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
