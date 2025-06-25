@@ -61,7 +61,7 @@ th::after {
   content: "⇅";
   position: absolute;
   right: 8px;
-  color: #bbb;
+  color: var(--mat-sys-on-tertiary);
   font-size: 0.8em;
 }
 
@@ -85,9 +85,18 @@ tr:hover {
 }
 
 html,
-body {
-  height: 100%;
+body,
+app-root {
+  min-height: 100vh;
 }
+app-root {
+  display: flex;
+  flex-direction: column;
+}
+app-footer {
+  margin-top: auto;
+}
+
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;

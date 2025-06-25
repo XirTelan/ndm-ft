@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-theme-switch',
   templateUrl: 'theme-switch.component.html',
+  imports: [MatButtonModule],
 })
 export class ThemeSwitch implements OnInit {
   theme: 'light' | 'dark' = window.matchMedia('(prefers-color-scheme: dark)')
