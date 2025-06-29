@@ -1,25 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
+  standalone: true,
   selector: 'app-theme-switch',
   templateUrl: 'theme-switch.component.html',
   imports: [MatButtonModule],
 })
-export class ThemeSwitch implements OnInit {
-  theme: 'light' | 'dark' = window.matchMedia('(prefers-color-scheme: dark)')
-    .matches
-    ? 'dark'
-    : 'light';
-
-  constructor() {}
-
-  ngOnInit() {
-    document.documentElement.setAttribute('data-theme', this.theme);
-  }
+export class ThemeSwitch {
+  themeService = inject(ThemeService);
 
   changeTheme() {
-    this.theme = this.theme === 'light' ? 'dark' : 'light';
-    document.documentElement.setAttribute('data-theme', this.theme);
+    this.themeService.toggleTheme();
   }
 }
