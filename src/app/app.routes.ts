@@ -1,9 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomePage } from './pages/home/home.components';
-import { NetworkMap } from './pages/network-map/network-map.component';
-import { isAuthGuard } from './is-auth-guard';
+import { NetworkMapComponent } from './pages/network-map/network-map.component';
 import { Login } from './pages/login/login';
-import { NotFound } from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -12,15 +11,14 @@ export const routes: Routes = [
   },
   {
     path: 'network-map',
-    component: NetworkMap,
-    canActivate: [isAuthGuard],
+    component: NetworkMapComponent,
     data: { label: 'Network Map' },
   },
   {
     path: 'internet',
     data: { label: 'Internet' },
     loadComponent: () =>
-      import('./pages/internet/internet.component').then((c) => c.InternetPage),
+      import('./pages/internet/internet.component').then((c) => c.InternetComponent),
   },
   {
     path: 'wireless',
@@ -31,7 +29,7 @@ export const routes: Routes = [
     path: 'advanced',
     data: { label: 'Advanced' },
     loadComponent: () =>
-      import('./pages/advanced/advanced.component').then((c) => c.Advanced),
+      import('./pages/advanced/advanced.component').then((c) => c.AdvancedComponent),
   },
   {
     path: 'login',
@@ -39,6 +37,6 @@ export const routes: Routes = [
   },
   {
     path: '**',
-    component: NotFound,
+    component: NotFoundComponent,
   },
 ];

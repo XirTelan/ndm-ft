@@ -6,11 +6,11 @@ import { routes } from '@/constant';
 
 @Component({
   standalone: true,
-  selector: 'route-table',
+  selector: 'app-route-table',
   imports: [TitleCasePipe],
   templateUrl: './route-table.component.html',
 })
-export class RouteTable {
+export class RouteTableComponent {
   readonly SORTABLE_COLUMNS = SORTABLE_COLUMNS;
 
   protected sortBy = signal<SortBy>(null);

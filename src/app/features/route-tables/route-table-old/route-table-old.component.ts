@@ -6,14 +6,14 @@ import { TitleCasePipe } from '@angular/common';
 
 @Component({
   standalone: true,
-  selector: 'route-table-old',
+  selector: 'app-route-table-old',
   imports: [TitleCasePipe],
   templateUrl: './route-table-old.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RouteTableOld {
+export class RouteTableOldComponent {
   protected sortBy: SortBy = null;
-  protected sortAsc: boolean = true;
+  protected sortAsc = true;
   readonly SORTABLE_COLUMNS = SORTABLE_COLUMNS;
 
   get sortedRoutes() {

@@ -1,26 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
-import { toSignal } from '@angular/core/rxjs-interop';
-import { map } from 'rxjs';
+import { Component } from '@angular/core';
+import { UsageStatComponent } from '../../features/usage-stat/usage-stat.component';
 
 @Component({
   standalone: true,
-  selector: 'network-map',
-  template: `
-    <div>Test</div>
-    <ul>
-      @for (item of posts(); track $index) {
-      <li>{{ item }}</li>
-      }
-    </ul>
-  `,
+  selector: 'app-network-map',
+  imports: [UsageStatComponent],
+  templateUrl: './network-map.component.html',
 })
-export class NetworkMap {
-  http = inject(HttpClient);
-  posts = toSignal(
-    this.http
-      .get<any[]>('https://jsonplaceholder.typicode.com/posts')
-      .pipe(map((posts) => posts.map((post) => post.id))),
-    { initialValue: [] } // Optional initial value
-  );
-}
+export class NetworkMapComponent {}

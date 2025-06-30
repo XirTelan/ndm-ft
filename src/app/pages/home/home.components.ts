@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
-
-import { RouteTableRx } from '../../features/route-tables/route-table-rx/route-table.component';
-import { RouteTable } from '../../features/route-tables/route-table/route-table.component';
-import { RouteTableOld } from '../../features/route-tables/route-table-old/route-table-old.component';
+import {
+  RouteTableComponent,
+  RouteTableOldComponent,
+  RouteTableRxComponent,
+} from '@/app/features/route-tables';
 
 @Component({
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
-  imports: [RouteTableRx, RouteTable, RouteTableOld, MatTabsModule],
+  imports: [
+    RouteTableRxComponent,
+    RouteTableComponent,
+    RouteTableOldComponent,
+    MatTabsModule,
+  ],
 })
 export class HomePage {}

@@ -8,7 +8,7 @@ import { ThemeService } from '@/app/services/theme/theme.service';
   templateUrl: 'theme-switch.component.html',
   imports: [MatButtonModule],
 })
-export class ThemeSwitch {
+export class ThemeSwitchComponent {
   themeService = inject(ThemeService);
 
   changeTheme() {

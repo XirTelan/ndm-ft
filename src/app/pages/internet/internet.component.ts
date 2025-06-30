@@ -1,11 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-internet',
   templateUrl: 'internet.component.html',
+  styleUrl: 'internet.component.scss',
 })
-export class InternetPage implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-}
+export class InternetComponent {}

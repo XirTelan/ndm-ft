@@ -7,12 +7,12 @@ import { AsyncPipe, TitleCasePipe } from '@angular/common';
 
 @Component({
   standalone: true,
-  selector: 'route-table-rx',
+  selector: 'app-route-table-rx',
   imports: [AsyncPipe, TitleCasePipe],
   templateUrl: './route-table-rx.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RouteTableRx {
+export class RouteTableRxComponent {
   protected sortBy$ = new BehaviorSubject<SortBy>(null);
   protected sortAsc$ = new BehaviorSubject<boolean>(true);
 
