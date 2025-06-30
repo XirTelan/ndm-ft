@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { routes } from '../../../../constant';
-import { compareRoutes } from '../../../../utils';
-import { SORTABLE_COLUMNS, SortBy } from '../../../types';
+import { SORTABLE_COLUMNS, SortBy } from '@/app/types';
+import { routes } from '@/constant';
+import { compareRoutes } from '@/utils';
 import { TitleCasePipe } from '@angular/common';
 
 @Component({

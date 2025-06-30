@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink, Route } from '@angular/router';
-import { ThemeSwitch } from '../../features/theme-switch/theme-switch.component';
+import { ThemeSwitchComponent } from '../../features/theme-switch/theme-switch.component';
 
 @Component({
   selector: 'app-header',

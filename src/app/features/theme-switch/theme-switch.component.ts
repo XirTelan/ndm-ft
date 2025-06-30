@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { ThemeService } from '../../services/theme.service';
+import { ThemeService } from '@/app/services/theme/theme.service';
 
 @Component({
   standalone: true,

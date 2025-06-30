@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { routes } from '../../../../constant';
+import { SORTABLE_COLUMNS, SortBy } from '@/app/types';
+import { routes } from '@/constant';
+import { compareRoutes } from '@/utils';
 import { BehaviorSubject, combineLatest, map } from 'rxjs';
-import { compareRoutes } from '../../../../utils';
-import { SORTABLE_COLUMNS, SortBy } from '../../../types';
 import { AsyncPipe, TitleCasePipe } from '@angular/common';
 
 @Component({

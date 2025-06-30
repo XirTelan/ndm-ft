@@ -1,8 +1,8 @@
 import { Component, signal, computed } from '@angular/core';
-import { routes } from '../../../../constant';
-import { SORTABLE_COLUMNS, SortBy } from '../../../types';
-import { compareRoutes } from '@/src/utils';
+import { compareRoutes } from '@/utils';
 import { TitleCasePipe } from '@angular/common';
+import { SORTABLE_COLUMNS, SortBy } from '@/app/types';
+import { routes } from '@/constant';
 
 @Component({
   standalone: true,
